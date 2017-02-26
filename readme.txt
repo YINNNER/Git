@@ -13,4 +13,4 @@ local repository
 6.git log （显示提及日志）—-pretty=oneline
 7.commit id 
 
-halal
+hala

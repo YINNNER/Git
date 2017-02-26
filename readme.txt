@@ -1,7 +1,4 @@
-Git is a distributed version control system.
-Git is a free software.
-
-Git:
+Git:分布式版本控制系统
 
 local repository
 
@@ -34,4 +31,16 @@ local repository
 把readme.txt文件在工作区的修改全部撤销，这里有两种情况：
 一种是readme.txt自修改后还没有被放到暂存区，现在，撤销修改就回到和版本库一模一样的状态；
 一种是readme.txt已经添加到暂存区后，又作了修改，现在，撤销修改就回到添加到暂存区后的状态。
-总之，就是让这个文件回到最近一次git commit或git add时的状态。
+总之，就是让这个文件回到最近一次git commit或git add时的状态。（git checkout -- file命令中的--很重要，没有--，就变成了“切换到另一个分支”的命令）
+
+16.git reset HEAD readme.txt（可以把暂存区的修改撤销掉（unstage），重新放回工作区，就是撤销了git add的操作）
+git reset命令既可以回退版本，也可以把暂存区的修改回退到工作区。当我们用HEAD时，表示最新的版本。再用git status查看一下，现在暂存区是干净的，工作区有修改。
+
+17.
+git rm read.txt (从版本库里删除)
+git checkout —read.txt (把误删的文件恢复到最新版本,但会丢失最近一次提交后你修改的内容。其实是用版本库里的版本替换工作区的版本，无论工作区是修改还是删除，都可以“一键还原”。)
+
+
+remote repository
+
+1.

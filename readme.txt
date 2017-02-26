@@ -52,12 +52,15 @@ git push -u origin master
 2.git push origin master(把本地master分支的最新修改推送至GitHub)
 
 小结：
-要关联一个远程库，使用命令git remote add origin git@server-name:path/repo-name.git；
-OR git remote add origin https://github.com/YINNNER/Git.git;
+关联一个远程库，使用命令
+     git remote add origin git@server-name:path/repo-name.git;
+E.G. git remote add origin git@github.com:YINNNER/Git.git
+OR   git remote add origin https://github.com/YINNNER/Git.git;
 关联后，使用命令git push -u origin master第一次推送master分支的所有内容；
 此后，每次本地提交后，只要有必要，就可以使用命令git push origin master推送最新修改；
 分布式版本系统的最大好处之一是在本地工作完全不需要考虑远程库的存在，也就是有没有联网都可以正常工作。当有网络的时候，再把本地提交推送一下就完成了同步！
 
-
+3. git clone git@github.com:YINNNER/Git.git;
+Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。通过ssh支持的原生git协议速度最快。
 
 

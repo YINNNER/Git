@@ -63,4 +63,13 @@ OR   git remote add origin https://github.com/YINNNER/Git.git;
 3. git clone git@github.com:YINNNER/Git.git;
 Git支持多种协议，默认的git://使用ssh，但也可以使用https等其他协议。使用https除了速度慢以外，还有个最大的麻烦是每次推送都必须输入口令，但是在某些只开放http端口的公司内部就无法使用ssh协议而只能用https。通过ssh支持的原生git协议速度最快。
 
+4.使用分支：
+查看分支：git branch
+创建分支：git branch <name>
+切换分支：git checkout <name>（切换成为当前分支）
+创建+切换分支：git checkout -b <name>
+合并某分支到当前分支：git merge <name>
+删除分支：git branch -d <name>
 
+5.当Git无法自动合并分支时，就必须首先解决冲突。解决冲突后，再提交，合并完成。
+6.git log --graph （显示分支合并图）
